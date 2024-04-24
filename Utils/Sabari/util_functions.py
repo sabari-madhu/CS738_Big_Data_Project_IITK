@@ -79,7 +79,7 @@ def get_state_updated_plots_party_stats(state):
         figs = {}
         for col, col_df in state_col_dataframe_dict.items():
             state_col_dataframe_dict[col] = get_party_record_count_and_filter(col_df)
-            figs[col] = px.bar(state_col_dataframe_dict[col], x="PARTY", y="Count", color=col, title=f"India : Party vs {col}", )
+            figs[col] = px.bar(state_col_dataframe_dict[col], x="PARTY", y="Count", color=col, title=f"India : {col} DISTRIBUTION OF CANDIDATES PER POLITICAL PARTY", )
         return figs
         
     # print(col_dataframe_dict)
@@ -87,7 +87,7 @@ def get_state_updated_plots_party_stats(state):
     figs = {}
     for col, col_df in state_col_dataframe_dict.items():
         state_col_dataframe_dict[col] = get_party_record_count_and_filter(col_df)
-        figs[col] = px.bar(state_col_dataframe_dict[col], x="PARTY", y="Count", color=col, title=f"{state} : Party vs {col}", )
+        figs[col] = px.bar(state_col_dataframe_dict[col], x="PARTY", y="Count", color=col, title=f"{state} : {col} DISTRIBUTION OF CANDIDATES PER POLITICAL PARTY", )
         # figs[col].update_layout(plot_bgcolor='#303030', paper_bgcolor='#303030', font=dict(size=14,color='#FFFFFF'))
         
     return figs
