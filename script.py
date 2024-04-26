@@ -348,7 +348,7 @@ def update_bar_chart(selected_zone):
         labels={'STATE': 'State', 'PERCENTAGE_TOTAL_VOTES': 'Percentage of Voters'}
     )
 
-    fig.update_layout(xaxis_title='State', yaxis_title='Percentage of Voters', yaxis_range=[0-100])
+    fig.update_layout(xaxis_title='State', yaxis_title='Percentage of Voters', yaxis_range=[0, 100])
     return fig
 
 if __name__ == '__main__':
